@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <a href="#" id="A1">Artikel 1</a>   
+    <a href="#" id="A2">Artikel 2</a>
+
+    <div class="artikel" id="AR1">
+        <h1>Artikel 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque quisquam in id at placeat neque perferendis sapiente, voluptatibus laudantium et accusantium possimus consectetur recusandae autem ad voluptates eos dolor rem.</p>
+    </div>
+    <div class="artikel" id="AR2">
+        <h1>Artikel 2</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque quisquam in id at placeat neque perferendis sapiente, voluptatibus laudantium et accusantium possimus consectetur recusandae autem ad voluptates eos dolor rem.</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#AR1").hide();
+            $("#AR2").hide();
+            $("#A1").click(function(){
+                $("#AR1").show(200);
+                $("#AR2").hide(150);
+            })
+            $("#A2").click(function(){
+                $("#AR1").hide(150);
+                $("#AR2").show(200);
+            })
+
+            
+        })
+    </script>
+    <!-- <script>
+        // document.getElementById("AR1").style.display="none";
+        // document.getElementById("AR2").style.display="none";
+
+        document.getElementById("A1").onclick = function(){
+            document.getElementById("AR1").style.display="block";
+            document.getElementById("AR2").style.display="none";
+        }
+        document.getElementById("A2").onclick = function(){
+            document.getElementById("AR1").style.display="none";
+            document.getElementById("AR2").style.display="block";
+        }
+    </script> -->
+</body>
+</html>
